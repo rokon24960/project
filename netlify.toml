@@ -1,11 +1,12 @@
 [build]
   publish = "out"
-  command = "npm install && npm run build"
+  command = "npm ci --force || npm install --force && npm run build"
 
 [build.environment]
   NODE_VERSION = "18"
   NODE_ENV = "production"
   NEXT_TELEMETRY_DISABLED = "1"
+  NPM_FLAGS = "--force"
 
 [[redirects]]
   from = "/*"
