@@ -7,8 +7,9 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "export": "next build && next export",
-    "deploy": "npm run build && npm run export"
+    "clean": "rm -rf .next out",
+    "prebuild": "npm run clean",
+    "postbuild": "touch out/.nojekyll"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
