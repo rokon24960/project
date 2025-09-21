@@ -1,3 +1,9 @@
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Static export configuration
@@ -21,13 +27,23 @@ const nextConfig = {
   // Disable problematic optimizations
   swcMinify: false,
   
-  // Minimal webpack config
+  // Webpack config with path resolution
   webpack: (config) => {
     config.resolve.fallback = {
       fs: false,
       net: false,
       tls: false,
     };
+    
+    // Add path aliases
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname),
+      '@/components': path.resolve(__dirname, 'components'),
+      '@/lib': path.resolve(__dirname, 'lib'),
+      '@/hooks': path.resolve(__dirname, 'hooks'),
+    };
+    
     return config;
   },
 }
