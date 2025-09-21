@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Static export configuration
   output: 'export',
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
   distDir: 'out',
+  trailingSlash: true,
   
-  // Disable all server-side features for static export
+  // Disable all dynamic features
+  images: {
+    unoptimized: true,
+  },
+  
+  // Build configuration
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -13,46 +18,17 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   
-  // Image optimization must be disabled for static export
-  images: {
-    unoptimized: true,
-  },
-  
-  // Disable minification that can cause issues
+  // Disable problematic optimizations
   swcMinify: false,
   
-  // Webpack configuration for static export
-  webpack: (config, { isServer, dev }) => {
-    // Disable webpack cache in production builds
-    if (!dev) {
-      config.cache = false;
-    }
-    
-    // Handle client-side fallbacks
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-        crypto: false,
-        stream: false,
-        url: false,
-        zlib: false,
-        http: false,
-        https: false,
-        assert: false,
-        os: false,
-        path: false,
-      };
-    }
-    
+  // Minimal webpack config
+  webpack: (config) => {
+    config.resolve.fallback = {
+      fs: false,
+      net: false,
+      tls: false,
+    };
     return config;
-  },
-  
-  // Disable experimental features that can cause issues
-  experimental: {
-    esmExternals: false,
   },
 }
 
