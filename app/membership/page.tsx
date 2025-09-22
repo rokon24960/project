@@ -8,9 +8,9 @@ import { Crown, Star, Zap, Gift, Clock, Users, Trophy, Sparkles, Check } from "l
 export default function MembershipPage() {
   const membershipTiers = [
     {
-      name: "Silver Member",
-      price: "£29",
-      period: "per month",
+      name: "Standard Membership",
+      price: "£25",
+      period: "per year",
       description: "Perfect for casual players who enjoy regular games",
       features: [
         "10% discount on table bookings",
@@ -24,50 +24,25 @@ export default function MembershipPage() {
       gradient: "gradient-accent",
       glow: "success-glow",
       border: "success-border",
-      popular: false
+      popular: true
     },
     {
-      name: "Gold Member",
-      price: "£59",
-      period: "per month",
-      description: "Ideal for serious players seeking premium benefits",
+      name: "Student Membership - 40% discount",
+      price: "£15",
+      period: "per year",
+      description: "Perfect for casual players who enjoy regular games",
       features: [
-        "20% discount on table bookings",
-        "Priority booking (48h advance)",
-        "Free premium equipment",
-        "Weekly member events",
-        "2 complimentary drinks per visit",
-        "VIP tournament access",
-        "Guest privileges (1 guest)",
-        "Exclusive member lounge access"
+        "10% discount on table bookings",
+        "Priority booking (24h advance)",
+        "Free equipment rental",
+        "Monthly member events",
+        "Complimentary welcome drink",
+        "Member-only tournaments"
       ],
       icon: Trophy,
       gradient: "gradient-primary",
       glow: "professional-glow",
       border: "professional-border",
-      popular: true
-    },
-    {
-      name: "Platinum VIP",
-      price: "£99",
-      period: "per month",
-      description: "Ultimate luxury experience for elite players",
-      features: [
-        "30% discount on table bookings",
-        "Unlimited priority booking",
-        "Premium equipment included",
-        "Daily member events access",
-        "Unlimited complimentary drinks",
-        "Private VIP suite access",
-        "Guest privileges (3 guests)",
-        "Personal concierge service",
-        "Exclusive VIP tournaments",
-        "Private coaching sessions"
-      ],
-      icon: Crown,
-      gradient: "gradient-secondary",
-      glow: "accent-glow",
-      border: "accent-border",
       popular: false
     }
   ]
@@ -291,7 +266,7 @@ export default function MembershipPage() {
               <div className="text-muted-foreground">Member Support</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-primary professional-glow mb-2">3</div>
+              <div className="text-5xl font-bold text-primary professional-glow mb-2">2</div>
               <div className="text-muted-foreground">Membership Tiers</div>
             </div>
           </div>
