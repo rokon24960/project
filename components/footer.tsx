@@ -3,71 +3,73 @@ import { MapPin, Phone, Mail } from "lucide-react"
 export function Footer() {
   return (
     <footer id="contact" className="bg-card py-16 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div className="mb-6">
-              <img 
-                src="/Snooker club logo 2.svg" 
-                alt="Snooker Club Logo" 
-                className="h-64 w-auto animate-subtle-float drop-shadow-2xl hover:scale-115 transition-all duration-500"
-              />
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              Experience the finest snooker facilities with professional tables, expert coaching, and an atmosphere of
-              tradition and excellence.
-            </p>
+      <div className="container mx-auto max-w-7xl">
+        {/* Logo Section - Centered */}
+        <div className="text-center mb-12">
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/Snooker club logo 2.svg" 
+              alt="Snooker Club Logo" 
+              className="h-20 w-auto animate-subtle-float drop-shadow-2xl hover:scale-125 transition-all duration-500"
+            />
           </div>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+            Experience the finest snooker facilities with professional tables, expert coaching, and an atmosphere of
+            tradition and excellence.
+          </p>
+        </div>
 
+        {/* Footer Content Grid */}
+        <div className="grid md:grid-cols-3 gap-12 mb-8">
           <div>
-            <h3 className="font-semibold text-accent mb-4">Contact Info</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-accent" />
+            <h3 className="font-semibold text-accent mb-6 text-lg">Contact Info</h3>
+            <div className="space-y-4 text-base">
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                 <span className="text-muted-foreground">Basement Floor- 201-203 Hackney Road London E2 8JL</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-accent" />
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
                 <span className="text-muted-foreground">+44 20 7123 4567</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-accent" />
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-accent flex-shrink-0" />
                 <span className="text-muted-foreground">info@royalsnookerclub.co.uk</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold text-accent mb-4">Opening Hours</h3>
-            <div className="space-y-2 text-sm text-muted-foreground">
+            <h3 className="font-semibold text-accent mb-6 text-lg">Opening Hours</h3>
+            <div className="space-y-3 text-base text-muted-foreground">
               <div className="flex justify-between">
                 <span>Monday - Friday</span>
-                <span>10:00 - 23:00</span>
+                <span className="font-medium">10:00 - 23:00</span>
               </div>
               <div className="flex justify-between">
                 <span>Saturday</span>
-                <span>09:00 - 24:00</span>
+                <span className="font-medium">09:00 - 24:00</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
-                <span>10:00 - 22:00</span>
+                <span className="font-medium">10:00 - 22:00</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold text-accent mb-4">Quick Links</h3>
-            <div className="space-y-2 text-sm">
-              <a href="#about" className="block text-muted-foreground hover:text-accent transition-colors">
+            <h3 className="font-semibold text-accent mb-6 text-lg">Quick Links</h3>
+            <div className="space-y-3 text-base">
+              <a href="#about" className="block text-muted-foreground hover:text-accent transition-colors hover:translate-x-1 duration-300">
                 About Us
               </a>
-              <a href="#facilities" className="block text-muted-foreground hover:text-accent transition-colors">
+              <a href="#facilities" className="block text-muted-foreground hover:text-accent transition-colors hover:translate-x-1 duration-300">
                 Facilities
               </a>
-              <a href="#events" className="block text-muted-foreground hover:text-accent transition-colors">
+              <a href="#events" className="block text-muted-foreground hover:text-accent transition-colors hover:translate-x-1 duration-300">
                 Events
               </a>
-              <a href="#membership" className="block text-muted-foreground hover:text-accent transition-colors">
+              <a href="#membership" className="block text-muted-foreground hover:text-accent transition-colors hover:translate-x-1 duration-300">
                 Membership
               </a>
             </div>

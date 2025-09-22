@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { HeroCarousel } from "@/components/hero-carousel"
+import { StatsSection } from "@/components/stats-section"
 import { WhyJoinSection } from "@/components/why-join-section"
 import { MembershipOptionsSection } from "@/components/membership-options-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <HeroCarousel />
+      <StatsSection />
       <WhyJoinSection />
       <MembershipOptionsSection />
       <TestimonialsSection />

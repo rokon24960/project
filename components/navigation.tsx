@@ -35,7 +35,7 @@ export function Navigation() {
             <img 
               src="/Snooker club logo 2.svg" 
               alt="Snooker Club Logo" 
-              className="h-52 w-auto group-hover:scale-120 transition-all duration-500 animate-subtle-float drop-shadow-2xl"
+              className="h-20 w-auto group-hover:scale-130 transition-all duration-500 animate-subtle-float drop-shadow-2xl"
             />
           </Link>
 

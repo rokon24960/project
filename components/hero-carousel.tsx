@@ -3,27 +3,39 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Users, Clock, Lightbulb, Calendar } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
     {
-      image: "/friends-playing-snooker-with-drinks.jpg",
-      alt: "Members playing snooker"
+      image: "/C6069T01.JPG",
+      alt: "Snooker club interior"
     },
     {
-      image: "/neon-lit-snooker-table-in-dark-nightclub-with-colo.jpg",
-      alt: "Professional snooker table"
+      image: "/C6081T01.JPG",
+      alt: "Professional snooker tables"
     },
     {
-      image: "/vintage-snooker-club-interior-with-elegant-wooden-.jpg",
-      alt: "Club interior"
+      image: "/C6107T01.JPG",
+      alt: "Club atmosphere"
     },
     {
-      image: "/bartender-serving-drinks-snooker-club.jpg",
-      alt: "Bar and lounge area"
+      image: "/C6110T01.JPG",
+      alt: "Snooker playing area"
+    },
+    {
+      image: "/C6131T01.JPG",
+      alt: "Club facilities"
+    },
+    {
+      image: "/C6138T01.JPG",
+      alt: "Tournament setup"
+    },
+    {
+      image: "/C6152T01.JPG",
+      alt: "Premium snooker experience"
     }
   ]
 
@@ -127,26 +139,7 @@ export function HeroCarousel() {
             </Link>
           </div>
 
-          {/* Trust Badges */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-bold" style={{color: '#ffffff', textShadow: '2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9), 1px 1px 0px rgba(0,0,0,1)'}}>
-            <div className="flex items-center justify-center gap-2">
-              <Users className="h-4 w-4 text-accent" />
-              <span>8 full-size tables</span>
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <div className="w-4 h-4 bg-accent rounded-full"></div>
-              <span>Strachan cloth</span>
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <Lightbulb className="h-4 w-4 text-accent" />
-              <span>Low-glare LED lighting</span>
-            </div>
-            <div className="flex items-center justify-center gap-2">
-              <Clock className="h-4 w-4 text-accent" />
-              <span>Open till 1am Fri–Sat</span>
-            </div>
-          </div>
-        </div>
+                  </div>
       </div>
     </section>
   )
