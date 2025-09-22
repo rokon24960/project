@@ -230,30 +230,7 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-card/30">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-bold text-primary professional-glow mb-2">500+</div>
-              <div className="text-muted-foreground">Active Members</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-secondary accent-glow mb-2">95%</div>
-              <div className="text-muted-foreground">Satisfaction Rate</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-accent success-glow mb-2">24/7</div>
-              <div className="text-muted-foreground">Member Support</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-primary professional-glow mb-2">2</div>
-              <div className="text-muted-foreground">Membership Tiers</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
