@@ -12,14 +12,7 @@ export default function MembershipPage() {
       price: "£25",
       period: "per year",
       description: "Perfect for casual players who enjoy regular games",
-      features: [
-        "10% discount on table bookings",
-        "Priority booking (24h advance)",
-        "Free equipment rental",
-        "Monthly member events",
-        "Complimentary welcome drink",
-        "Member-only tournaments"
-      ],
+      features: [],
       icon: Star,
       gradient: "gradient-accent",
       glow: "success-glow",
@@ -31,14 +24,7 @@ export default function MembershipPage() {
       price: "£15",
       period: "per year",
       description: "Perfect for casual players who enjoy regular games",
-      features: [
-        "10% discount on table bookings",
-        "Priority booking (24h advance)",
-        "Free equipment rental",
-        "Monthly member events",
-        "Complimentary welcome drink",
-        "Member-only tournaments"
-      ],
+      features: [],
       icon: Trophy,
       gradient: "gradient-primary",
       glow: "professional-glow",
@@ -67,9 +53,9 @@ export default function MembershipPage() {
       color: "text-accent"
     },
     {
-      title: "VIP Treatment",
+      title: "Premium Treatment",
       description: "Personalized service and dedicated member support",
-      icon: Crown,
+      icon: Users,
       color: "text-primary"
     }
   ]
@@ -83,8 +69,8 @@ export default function MembershipPage() {
     },
     {
       name: "Sarah Chen",
-      membership: "Platinum VIP",
-      quote: "Absolutely worth every penny. The VIP suite and personal service make every visit special.",
+      membership: "Premium Member",
+      quote: "Absolutely worth every penny. The premium suite and personal service make every visit special.",
       rating: 5
     },
     {
@@ -112,13 +98,8 @@ export default function MembershipPage() {
         
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="p-4 rounded-full glass-effect">
-                <Crown className="h-12 w-12 text-secondary accent-glow" />
-              </div>
-            </div>
             <h1 className="font-sans text-5xl md:text-6xl font-bold mb-6 accent-glow text-secondary">
-              VIP Membership
+              Membership
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Elevate your snooker experience with exclusive benefits, priority access, 
@@ -335,7 +316,7 @@ export default function MembershipPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="gradient-secondary hover:scale-105 transition-all duration-300 accent-border">
-              <Crown className="h-4 w-4 mr-2" />
+              <Sparkles className="h-4 w-4 mr-2" />
               Become a Member
             </Button>
             <Button size="lg" variant="outline" className="glass-effect border-primary/30 text-primary hover:bg-primary/10">

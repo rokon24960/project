@@ -7,37 +7,22 @@ export function MembershipOptionsSection() {
   const membershipOptions = [
     {
       name: "Standard Membership",
-      price: "£45",
-      period: "per month",
-      description: "Perfect for regular players who want access to quality tables and a respectful atmosphere",
-      features: [
-        "Access to all 8 tables",
-        "Member rates on table time",
-        "Bar and lounge access",
-        "League participation",
-        "Equipment storage",
-        "Community events"
-      ],
+      price: "£25",
+      period: "per year",
+      description: "Perfect for casual players who enjoy regular games",
+      features: [],
       icon: Star,
-      popular: false,
+      popular: true,
       buttonText: "Apply Now"
     },
     {
-      name: "Premium Membership",
-      price: "£75",
-      period: "per month",
-      description: "Enhanced membership with priority booking and exclusive benefits for serious players",
-      features: [
-        "All Standard benefits",
-        "Priority table booking",
-        "Extended playing hours",
-        "Guest privileges (2 per month)",
-        "Tournament entry discounts",
-        "Personal locker",
-        "Complimentary drinks (2 per visit)"
-      ],
-      icon: Crown,
-      popular: true,
+      name: "Student Membership - 40% discount",
+      price: "£15",
+      period: "per year",
+      description: "Perfect for casual players who enjoy regular games",
+      features: [],
+      icon: Star,
+      popular: false,
       buttonText: "Apply Now"
     }
   ]
