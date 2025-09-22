@@ -165,9 +165,10 @@ html.dark {
 
 /* Neon glass morphism effect */
 .glass-effect {
-  background: rgba(26, 26, 26, 0.85);
-  backdrop-filter: blur(20px);
+  background: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(51, 51, 51, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* Neon card hover effects */
@@ -185,21 +186,21 @@ html.dark {
   text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary);
 }
 
-/* Specific neon colors for different text elements */
+/* Specific neon colors for different text elements with enhanced contrast */
 .neon-orange {
-  text-shadow: 0 0 5px #FF6A00, 0 0 10px #FF6A00, 0 0 15px #FF6A00, 0 0 20px #FF6A00;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 5px #FF6A00, 0 0 15px #FF6A00, 0 0 30px #FF6A00;
 }
 
 .neon-pink {
-  text-shadow: 0 0 5px #FF3EBF, 0 0 10px #FF3EBF, 0 0 15px #FF3EBF, 0 0 20px #FF3EBF;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 5px #FF3EBF, 0 0 15px #FF3EBF, 0 0 30px #FF3EBF;
 }
 
 .neon-accent-pink {
-  text-shadow: 0 0 5px #FF2B92, 0 0 10px #FF2B92, 0 0 15px #FF2B92, 0 0 20px #FF2B92;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 5px #FF2B92, 0 0 15px #FF2B92, 0 0 30px #FF2B92;
 }
 
 .neon-accent-green {
-  text-shadow: 0 0 5px #00FF7A, 0 0 10px #00FF7A, 0 0 15px #00FF7A, 0 0 20px #00FF7A;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 0 5px #00FF7A, 0 0 15px #00FF7A, 0 0 30px #00FF7A;
 }
 
 .neon-border {
@@ -520,6 +521,15 @@ html.dark {
 .nav-link:active {
   animation: glitch 0.3s ease-in-out;
 }
+
+/* Contrast classes no longer needed */
+/*.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.neon-accent-green-shadow {
+  box-shadow: 0 0 5px #00FF7A, 0 0 10px #00FF7A;
+}*/
 
 /* Spectacular particle burst effect */
 .nav-link {

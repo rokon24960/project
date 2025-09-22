@@ -44,19 +44,18 @@ export function MembershipOptionsSection() {
           {membershipOptions.map((option, index) => {
             const IconComponent = option.icon
             return (
-              <Card 
-                key={index} 
-                className={`relative bg-card border-border/50 hover:border-primary/30 transition-all duration-300 ${
-                  option.popular ? 'ring-2 ring-primary/20 scale-105' : ''
-                }`}
-              >
+              <div className="relative">
                 {option.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                    <div className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
                       Most Popular
                     </div>
                   </div>
                 )}
+                <Card 
+                  key={index} 
+                  className="bg-card border-border/50 hover:border-primary/30 transition-all duration-300 h-full flex flex-col mt-4"
+                >
                 
                 <CardHeader className="text-center pb-4">
                   <div className="p-4 rounded-full bg-background w-fit mx-auto mb-4 neon-border">
@@ -70,8 +69,8 @@ export function MembershipOptionsSection() {
                   </div>
                 </CardHeader>
                 
-                <CardContent>
-                  <div className="space-y-3 mb-8">
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="space-y-3 mb-8 flex-1">
                     {option.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <Check className="h-4 w-4 text-accent flex-shrink-0" />
@@ -93,6 +92,7 @@ export function MembershipOptionsSection() {
                   </Link>
                 </CardContent>
               </Card>
+              </div>
             )
           })}
         </div>

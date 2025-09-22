@@ -119,18 +119,19 @@ export default function MembershipPage() {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {membershipTiers.map((tier, index) => {
               const IconComponent = tier.icon
               return (
-                <Card key={index} className={`glass-effect ${tier.border} card-hover relative ${tier.popular ? 'scale-105' : ''}`}>
+                <div className="relative">
                   {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-primary text-primary-foreground px-4 py-1">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                      <Badge className="bg-primary text-primary-foreground px-4 py-1 shadow-lg">
                         Most Popular
                       </Badge>
                     </div>
                   )}
+                  <Card key={index} className={`glass-effect ${tier.border} card-hover h-full flex flex-col mt-4`}>
                   <CardHeader className="text-center pb-4">
                     <div className={`p-4 rounded-full ${tier.gradient} w-fit mx-auto mb-4`}>
                       <IconComponent className="h-8 w-8 text-white" />
@@ -142,8 +143,8 @@ export default function MembershipPage() {
                       <span className="text-muted-foreground ml-2">{tier.period}</span>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3 mb-8">
+                  <CardContent className="flex-1 flex flex-col">
+                    <div className="space-y-3 mb-8 flex-1">
                       {tier.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-3">
                           <Check className="h-4 w-4 text-accent flex-shrink-0" />
@@ -157,6 +158,7 @@ export default function MembershipPage() {
                     </Button>
                   </CardContent>
                 </Card>
+                </div>
               )
             })}
           </div>

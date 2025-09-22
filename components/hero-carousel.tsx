@@ -96,53 +96,55 @@ export function HeroCarousel() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="font-sans text-4xl md:text-6xl font-bold mb-6 text-balance">
-          <span className="neon-orange">Members-Only</span>{" "}
-          <span className="neon-pink">Snooker</span>
-          <span className="block neon-accent-green">in the Heart of Hackney</span>
-        </h1>
-        
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto leading-relaxed">
-          Tournament-grade tables, a proper bar, and a calm place to play—open late for members.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link href="/membership">
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3 neon-border neon-button"
-            >
-              Apply for Membership
-            </Button>
-          </Link>
-          <Link href="/reserve">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg px-8 py-3 bg-transparent neon-border neon-button"
-            >
-              Book Table
-            </Button>
-          </Link>
-        </div>
+        <div className="p-8">
+          <h1 className="font-sans text-4xl md:text-6xl font-bold mb-6 text-balance" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)'}}>
+            <span className="neon-orange">Members-Only</span>{" "}
+            <span className="neon-pink">Snooker</span>
+            <span className="block neon-accent-green">in the Heart of Hackney</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl mb-8 text-pretty max-w-3xl mx-auto leading-relaxed font-semibold" style={{color: '#ffffff', textShadow: '3px 3px 6px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.8), 1px 1px 0px rgba(0,0,0,1)'}}>
+            Tournament-grade tables, a proper bar, and a calm place to play—open late for members.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link href="/membership">
+              <Button
+                size="lg"
+                className="bg-orange-500 text-white hover:bg-orange-600 text-lg px-8 py-3 neon-border neon-button font-bold shadow-lg"
+              >
+                Apply for Membership
+              </Button>
+            </Link>
+            <Link href="/reserve">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white text-lg px-8 py-3 bg-black/50 neon-border neon-button font-bold shadow-lg"
+              >
+                Book Table
+              </Button>
+            </Link>
+          </div>
 
-        {/* Trust Badges */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center justify-center gap-2">
-            <Users className="h-4 w-4 text-accent" />
-            <span>8 full-size tables</span>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <div className="w-4 h-4 bg-accent rounded-full"></div>
-            <span>Strachan cloth</span>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <Lightbulb className="h-4 w-4 text-accent" />
-            <span>Low-glare LED lighting</span>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <Clock className="h-4 w-4 text-accent" />
-            <span>Open till 1am Fri–Sat</span>
+          {/* Trust Badges */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-bold" style={{color: '#ffffff', textShadow: '2px 2px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9), 1px 1px 0px rgba(0,0,0,1)'}}>
+            <div className="flex items-center justify-center gap-2">
+              <Users className="h-4 w-4 text-accent" />
+              <span>8 full-size tables</span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <div className="w-4 h-4 bg-accent rounded-full"></div>
+              <span>Strachan cloth</span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <Lightbulb className="h-4 w-4 text-accent" />
+              <span>Low-glare LED lighting</span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <Clock className="h-4 w-4 text-accent" />
+              <span>Open till 1am Fri–Sat</span>
+            </div>
           </div>
         </div>
       </div>
