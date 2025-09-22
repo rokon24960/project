@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, Music, Zap } from "lucide-react"
 
@@ -37,26 +38,30 @@ export function HeroSection() {
           <Zap className="h-6 w-6 text-accent animate-pulse" style={{ animationDelay: "0.5s" }} />
         </div>
         <h1 className="font-sans text-5xl md:text-7xl font-bold mb-6 text-balance">
-          <span className="neon-glow text-primary">NEON</span>
+          <span className="neon-glow text-primary">ELITE</span>
           <span className="block text-secondary neon-glow">SNOOKER LOUNGE</span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto">
-          Grab a drink, shoot some pool, and vibe with friends! Great tables, cold drinks, and good times every night.
+          Experience premium snooker in a sophisticated atmosphere. Professional tables, craft cocktails, and an exclusive ambiance for discerning players.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3 neon-border"
-          >
-            Book a Table
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg px-8 py-3 bg-transparent neon-border"
-          >
-            What's On Tonight
-          </Button>
+          <Link href="/reserve">
+            <Button
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3 neon-border"
+            >
+              Reserve Now
+            </Button>
+          </Link>
+          <Link href="/events">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg px-8 py-3 bg-transparent neon-border"
+            >
+              What's On Tonight
+            </Button>
+          </Link>
         </div>
       </div>
 

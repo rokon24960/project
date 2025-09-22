@@ -4,70 +4,183 @@
 
 :root {
   /* Updated to vibrant nightlife color palette with neon orange, pink, and teal */
-  --background: 10 10 10; /* Deep black for nightclub vibe */
-  --foreground: 255 255 255; /* Bright white text */
-  --card: 26 26 26; /* Dark card background */
-  --card-foreground: 255 255 255; /* White text on cards */
-  --popover: 26 26 26;
-  --popover-foreground: 255 255 255;
-  --primary: 234 88 12; /* Vibrant orange primary */
-  --primary-foreground: 255 255 255;
-  --secondary: 236 72 153; /* Electric pink secondary */
-  --secondary-foreground: 255 255 255;
-  --muted: 42 42 42; /* Dark muted */
-  --muted-foreground: 161 161 170; /* Light gray muted text */
-  --accent: 16 185 129; /* Neon teal accent */
-  --accent-foreground: 255 255 255;
-  --destructive: 255 61 0;
-  --destructive-foreground: 255 255 255;
-  --border: 51 51 51; /* Subtle borders */
-  --input: 26 26 26;
-  --ring: 234 88 12; /* Orange focus ring */
-  --chart-1: 236 72 153;
-  --chart-2: 16 185 129;
-  --chart-3: 234 88 12;
-  --chart-4: 251 191 36;
-  --chart-5: 139 92 246;
+  --background: #0a0a0a; /* Deep black for nightclub vibe */
+  --foreground: #ffffff; /* Bright white text */
+  --card: #1a1a1a; /* Dark card background */
+  --card-foreground: #ffffff; /* White text on cards */
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #ea580c; /* Vibrant orange primary */
+  --primary-foreground: #ffffff;
+  --secondary: #ec4899; /* Electric pink secondary */
+  --secondary-foreground: #ffffff;
+  --muted: #2a2a2a; /* Dark muted */
+  --muted-foreground: #a1a1aa; /* Light gray muted text */
+  --accent: #10b981; /* Neon teal accent */
+  --accent-foreground: #ffffff;
+  --destructive: #ff3d00;
+  --destructive-foreground: #ffffff;
+  --border: #333333; /* Subtle borders */
+  --input: #1a1a1a;
+  --ring: rgba(234, 88, 12, 0.5); /* Orange focus ring */
+  --chart-1: #ec4899;
+  --chart-2: #10b981;
+  --chart-3: #ea580c;
+  --chart-4: #fbbf24;
+  --chart-5: #8b5cf6;
   --radius: 0.75rem; /* More rounded for modern look */
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ea580c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ec4899;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #333333;
+  --sidebar-ring: rgba(234, 88, 12, 0.5);
 }
 
 .dark {
-  --background: 10 10 10;
-  --foreground: 255 255 255;
-  --card: 26 26 26;
-  --card-foreground: 255 255 255;
-  --popover: 26 26 26;
-  --popover-foreground: 255 255 255;
-  --primary: 234 88 12;
-  --primary-foreground: 255 255 255;
-  --secondary: 236 72 153;
-  --secondary-foreground: 255 255 255;
-  --muted: 42 42 42;
-  --muted-foreground: 161 161 170;
-  --accent: 16 185 129;
-  --accent-foreground: 255 255 255;
-  --destructive: 255 61 0;
-  --destructive-foreground: 255 255 255;
-  --border: 51 51 51;
-  --input: 26 26 26;
-  --ring: 234 88 12;
-  --chart-1: 236 72 153;
-  --chart-2: 16 185 129;
-  --chart-3: 234 88 12;
-  --chart-4: 251 191 36;
-  --chart-5: 139 92 246;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #ea580c;
+  --primary-foreground: #ffffff;
+  --secondary: #ec4899;
+  --secondary-foreground: #ffffff;
+  --muted: #2a2a2a;
+  --muted-foreground: #a1a1aa;
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+  --destructive: #ff3d00;
+  --destructive-foreground: #ffffff;
+  --border: #333333;
+  --input: #1a1a1a;
+  --ring: rgba(234, 88, 12, 0.5);
+  --chart-1: #ec4899;
+  --chart-2: #10b981;
+  --chart-3: #ea580c;
+  --chart-4: #fbbf24;
+  --chart-5: #8b5cf6;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ea580c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ec4899;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #333333;
+  --sidebar-ring: rgba(234, 88, 12, 0.5);
+}
+
+/* Ensure CSS variables work properly */
+html {
+  color-scheme: dark;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-/* Added neon glow effects for nightlife atmosphere */
+/* Neon glow effects for nightlife atmosphere */
+.professional-glow {
+  text-shadow: 0 0 5px rgb(234 88 12), 0 0 10px rgb(234 88 12), 0 0 15px rgb(234 88 12), 0 0 20px rgb(234 88 12);
+}
+
+.accent-glow {
+  text-shadow: 0 0 5px rgb(16 185 129), 0 0 10px rgb(16 185 129), 0 0 15px rgb(16 185 129), 0 0 20px rgb(16 185 129);
+}
+
+.success-glow {
+  text-shadow: 0 0 5px rgb(236 72 153), 0 0 10px rgb(236 72 153), 0 0 15px rgb(236 72 153), 0 0 20px rgb(236 72 153);
+}
+
+.professional-border {
+  box-shadow: 0 0 5px rgb(234 88 12), 0 0 10px rgb(234 88 12), inset 0 0 5px rgb(234 88 12), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+}
+
+.accent-border {
+  box-shadow: 0 0 5px rgb(16 185 129), 0 0 10px rgb(16 185 129), inset 0 0 5px rgb(16 185 129), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+}
+
+.success-border {
+  box-shadow: 0 0 5px rgb(236 72 153), 0 0 10px rgb(236 72 153), inset 0 0 5px rgb(236 72 153), 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* Refined animations */
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 4s ease-in-out infinite;
+}
+
+/* Vibrant nightlife gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, rgb(234 88 12) 0%, rgb(194 65 12) 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, rgb(236 72 153) 0%, rgb(190 24 93) 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, rgb(16 185 129) 0%, rgb(5 150 105) 100%);
+}
+
+/* Neon glass morphism effect */
+.glass-effect {
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(51, 51, 51, 0.5);
+}
+
+/* Neon card hover effects */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(234, 88, 12, 0.3);
+}
+
+/* Neon text effects */
 .neon-glow {
   text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
 }
@@ -76,9 +189,9 @@
   box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, inset 0 0 5px currentColor;
 }
 
+/* Neon pulse animation */
 @keyframes pulse-neon {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
   50% {
@@ -88,4 +201,21 @@
 
 .animate-pulse-neon {
   animation: pulse-neon 2s ease-in-out infinite;
+}
+
+/* Additional nightlife effects */
+.luxury-text {
+  background: linear-gradient(135deg, rgb(234 88 12) 0%, rgb(236 72 153) 50%, rgb(16 185 129) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.premium-shadow {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(51, 51, 51, 0.8);
+}
+
+.elegant-border {
+  border: 1px solid rgba(234, 88, 12, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
