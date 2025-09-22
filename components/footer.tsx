@@ -10,7 +10,7 @@ export function Footer() {
             <img 
               src="/Snooker club logo 2.svg" 
               alt="Snooker Club Logo" 
-              className="h-20 w-auto animate-subtle-float drop-shadow-2xl hover:scale-125 transition-all duration-500"
+              className="h-32 w-auto animate-subtle-float drop-shadow-2xl hover:scale-125 transition-all duration-500"
             />
           </div>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
