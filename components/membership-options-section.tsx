@@ -31,7 +31,10 @@ export function MembershipOptionsSection() {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 neon-glow text-accent">Membership Options</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            <span className="neon-orange">Membership</span>{" "}
+            <span className="neon-pink">Options</span>
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Choose the membership that fits your playing style and commitment level
           </p>

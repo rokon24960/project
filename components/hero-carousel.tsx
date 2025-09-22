@@ -86,11 +86,20 @@ export function HeroCarousel() {
         ))}
       </div>
 
+      {/* Floating Neon Dots */}
+      <div className="floating-dots">
+        <div className="floating-dot"></div>
+        <div className="floating-dot"></div>
+        <div className="floating-dot"></div>
+        <div className="floating-dot"></div>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="font-sans text-4xl md:text-6xl font-bold mb-6 text-balance">
-          <span className="neon-glow text-primary">Members-Only Snooker</span>
-          <span className="block text-accent neon-glow">in the Heart of Hackney</span>
+          <span className="neon-orange">Members-Only</span>{" "}
+          <span className="neon-pink">Snooker</span>
+          <span className="block neon-accent-green">in the Heart of Hackney</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto leading-relaxed">
@@ -101,7 +110,7 @@ export function HeroCarousel() {
           <Link href="/membership">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3 neon-border"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3 neon-border neon-button"
             >
               Apply for Membership
             </Button>
@@ -110,7 +119,7 @@ export function HeroCarousel() {
             <Button
               size="lg"
               variant="outline"
-              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg px-8 py-3 bg-transparent neon-border"
+              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg px-8 py-3 bg-transparent neon-border neon-button"
             >
               Book Table
             </Button>

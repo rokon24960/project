@@ -7,10 +7,14 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-sm">SLB</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center neon-border animate-pulse-neon">
+                <span className="text-white font-bold text-sm neon-accent-green">SLB</span>
               </div>
-              <span className="font-playfair text-xl font-bold text-accent">Snooker Lover Bar</span>
+              <span className="font-playfair text-xl font-bold">
+                <span className="neon-orange">Snooker</span>{" "}
+                <span className="neon-pink">Lover</span>{" "}
+                <span className="neon-accent-green">Bar</span>
+              </span>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
               Experience the finest snooker facilities with professional tables, expert coaching, and an atmosphere of

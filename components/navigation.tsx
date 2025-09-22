@@ -31,11 +31,15 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center neon-border">
-              <Zap className="h-4 w-4 text-primary-foreground" />
+          <Link href="/" className="flex items-center space-x-2 group">
+            <div className="logo-container w-8 h-8 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center neon-border animate-pulse-neon group-hover:animate-none group-hover:scale-110 transition-all duration-300">
+              <Zap className="h-4 w-4 text-white neon-accent-green group-hover:rotate-180 transition-transform duration-500" />
             </div>
-            <span className="font-sans text-xl font-bold text-secondary neon-glow">X SNOOKER LOVERS BAR</span>
+            <span className="font-sans text-xl font-bold group-hover:scale-105 transition-transform duration-300">
+              <span className="neon-orange group-hover:animate-pulse">SNOOKER</span>{" "}
+              <span className="neon-pink group-hover:animate-pulse" style={{animationDelay: '0.1s'}}>LOVERS</span>{" "}
+              <span className="neon-accent-green group-hover:animate-pulse" style={{animationDelay: '0.2s'}}>BAR</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,15 +48,17 @@ export function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 hover:neon-glow"
+                className="relative text-foreground hover:text-primary transition-all duration-300 group nav-link"
               >
-                {item.name}
+                <span className="relative z-10">{item.name}</span>
+                <div className="absolute inset-0 bg-primary/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 group-hover:w-full transition-all duration-300 ease-out"></div>
               </Link>
             ))}
             <Link href="/membership">
               <Button
                 variant="outline"
-                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent neon-border"
+                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent neon-border neon-button relative overflow-hidden"
               >
                 Join Us
               </Button>
@@ -78,7 +84,7 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
+                  className="block px-3 py-2 text-foreground hover:text-primary transition-all duration-300 mobile-nav-link rounded-lg"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -88,7 +94,7 @@ export function Navigation() {
                 <Link href="/membership">
                   <Button
                     variant="outline"
-                    className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
+                    className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent neon-border neon-button"
                   >
                     Join Us
                   </Button>
