@@ -182,11 +182,11 @@ html.dark {
 
 /* Neon text effects */
 .neon-glow {
-  text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  text-shadow: 0 0 5px rgb(234 88 12), 0 0 10px rgb(234 88 12), 0 0 15px rgb(234 88 12);
 }
 
 .neon-border {
-  box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, inset 0 0 5px currentColor;
+  box-shadow: 0 0 5px rgb(234 88 12), 0 0 10px rgb(234 88 12), inset 0 0 5px rgb(234 88 12);
 }
 
 /* Neon pulse animation */
