@@ -14,14 +14,6 @@ export function HeroCarousel() {
       alt: "Snooker club interior"
     },
     {
-      image: "/C6081T01.JPG",
-      alt: "Professional snooker tables"
-    },
-    {
-      image: "/C6107T01.JPG",
-      alt: "Club atmosphere"
-    },
-    {
       image: "/C6110T01.JPG",
       alt: "Snooker playing area"
     },
@@ -34,7 +26,15 @@ export function HeroCarousel() {
       alt: "Tournament setup"
     },
     {
-      image: "/C6152T01.JPG",
+      image: "/DSC07505.jpg",
+      alt: "Professional snooker tables"
+    },
+    {
+      image: "/DSC07531.jpg",
+      alt: "Club atmosphere"
+    },
+    {
+      image: "/DSC07549.jpg",
       alt: "Premium snooker experience"
     }
   ]
