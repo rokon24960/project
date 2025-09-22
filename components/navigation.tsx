@@ -30,16 +30,13 @@ export function Navigation() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="logo-container w-8 h-8 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center neon-border animate-pulse-neon group-hover:animate-none group-hover:scale-110 transition-all duration-300">
-              <Zap className="h-4 w-4 text-white neon-accent-green group-hover:rotate-180 transition-transform duration-500" />
-            </div>
-            <span className="font-sans text-xl font-bold group-hover:scale-105 transition-transform duration-300">
-              <span className="neon-orange group-hover:animate-pulse">SNOOKER</span>{" "}
-              <span className="neon-pink group-hover:animate-pulse" style={{animationDelay: '0.1s'}}>LOVERS</span>{" "}
-              <span className="neon-accent-green group-hover:animate-pulse" style={{animationDelay: '0.2s'}}>BAR</span>
-            </span>
+        <div className="flex items-center justify-between h-20">
+          <Link href="/" className="flex items-center group">
+            <img 
+              src="/Snooker club logo 2.svg" 
+              alt="Snooker Club Logo" 
+              className="h-52 w-auto group-hover:scale-120 transition-all duration-500 animate-subtle-float drop-shadow-2xl"
+            />
           </Link>
 
           {/* Desktop Navigation */}

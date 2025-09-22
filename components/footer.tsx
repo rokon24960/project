@@ -6,15 +6,12 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center neon-border animate-pulse-neon">
-                <span className="text-white font-bold text-sm neon-accent-green">SLB</span>
-              </div>
-              <span className="font-playfair text-xl font-bold">
-                <span className="neon-orange">Snooker</span>{" "}
-                <span className="neon-pink">Lover</span>{" "}
-                <span className="neon-accent-green">Bar</span>
-              </span>
+            <div className="mb-6">
+              <img 
+                src="/Snooker club logo 2.svg" 
+                alt="Snooker Club Logo" 
+                className="h-64 w-auto animate-subtle-float drop-shadow-2xl hover:scale-115 transition-all duration-500"
+              />
             </div>
             <p className="text-muted-foreground text-sm mb-4">
               Experience the finest snooker facilities with professional tables, expert coaching, and an atmosphere of
