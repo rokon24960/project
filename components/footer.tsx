@@ -30,11 +30,11 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent flex-shrink-0" />
-                <span className="text-muted-foreground">+44 20 7123 4567</span>
+                <span className="text-muted-foreground">+44 020 7916 1244</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent flex-shrink-0" />
-                <span className="text-muted-foreground">info@royalsnookerclub.co.uk</span>
+                <span className="text-muted-foreground">snookerloversbar@gmail.com</span>
               </div>
             </div>
           </div>
@@ -43,16 +43,32 @@ export function Footer() {
             <h3 className="font-semibold text-accent mb-6 text-lg">Opening Hours</h3>
             <div className="space-y-3 text-base text-muted-foreground">
               <div className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span className="font-medium">10:00 - 23:00</span>
+                <span>Monday</span>
+                <span className="font-medium">10:00 - 02:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Tuesday</span>
+                <span className="font-medium">10:00 - 02:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Wednesday</span>
+                <span className="font-medium">10:00 - 02:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Thursday</span>
+                <span className="font-medium">10:00 - 02:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Friday</span>
+                <span className="font-medium">10:00 - 03:00</span>
               </div>
               <div className="flex justify-between">
                 <span>Saturday</span>
-                <span className="font-medium">09:00 - 24:00</span>
+                <span className="font-medium">10:00 - 03:00</span>
               </div>
               <div className="flex justify-between">
                 <span>Sunday</span>
-                <span className="font-medium">10:00 - 22:00</span>
+                <span className="font-medium">10:00 - 02:00</span>
               </div>
             </div>
           </div>
