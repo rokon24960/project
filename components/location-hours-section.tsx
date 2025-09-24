@@ -3,9 +3,13 @@ import { MapPin, Clock, Phone, Mail } from "lucide-react"
 
 export function LocationHoursSection() {
   const hours = [
-    { day: "Monday - Thursday", time: "4:00 PM - 11:00 PM" },
-    { day: "Friday - Saturday", time: "4:00 PM - 1:00 AM" },
-    { day: "Sunday", time: "2:00 PM - 10:00 PM" }
+    { day: "Monday", time: "10:00 - 02:00" },
+    { day: "Tuesday", time: "10:00 - 02:00" },
+    { day: "Wednesday", time: "10:00 - 02:00" },
+    { day: "Thursday", time: "10:00 - 02:00" },
+    { day: "Friday", time: "10:00 - 03:00" },
+    { day: "Saturday", time: "10:00 - 03:00" },
+    { day: "Sunday", time: "10:00 - 02:00" }
   ]
 
   return (
@@ -33,9 +37,9 @@ export function LocationHoursSection() {
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Address</h4>
                   <p className="text-muted-foreground">
-                    123 Mare Street<br />
-                    Hackney, London<br />
-                    E8 3RH
+                    Basement Floor- 201-203 Hackney Road<br />
+                    London<br />
+                    E2 8JL
                   </p>
                 </div>
                 
@@ -52,11 +56,11 @@ export function LocationHoursSection() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Phone className="h-4 w-4 text-accent" />
-                  <span className="text-muted-foreground">020 7123 4567</span>
+                  <span className="text-muted-foreground">+44 020 7916 1244</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-4 w-4 text-accent" />
-                  <span className="text-muted-foreground">info@xsnookerlovers.com</span>
+                  <span className="text-muted-foreground">snookerloversbar@gmail.com</span>
                 </div>
               </div>
             </CardContent>
@@ -110,8 +114,8 @@ export function LocationHoursSection() {
                 <div className="flex items-center gap-2">
                   <MapPin className="h-3 w-3 text-primary" />
                   <div>
-                    <p className="text-xs font-semibold text-foreground">X Snooker Lovers Bar</p>
-                    <p className="text-xs text-muted-foreground">123 Mare Street, E8 3RH</p>
+                    <p className="text-xs font-semibold text-foreground">Snooker Lovers Bar</p>
+                    <p className="text-xs text-muted-foreground">201-203 Hackney Road, E2 8JL</p>
                   </div>
                 </div>
               </div>
