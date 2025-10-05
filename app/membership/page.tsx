@@ -1,11 +1,23 @@
+"use client"
+
+import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Crown, Star, Zap, Gift, Clock, Users, Trophy, Sparkles, Check } from "lucide-react"
+import { Crown, Star, Zap, Gift, Clock, Users, Trophy, Sparkles, Check, MapPin, Phone, Mail, X } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 
 export default function MembershipPage() {
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false)
+
   const membershipTiers = [
     {
       name: "Standard Membership",
@@ -152,7 +164,10 @@ export default function MembershipPage() {
                         </div>
                       ))}
                     </div>
-                    <Button className={`w-full ${tier.gradient} hover:scale-105 transition-all duration-300 ${tier.border}`}>
+                    <Button 
+                      onClick={() => setIsContactDialogOpen(true)}
+                      className={`w-full ${tier.gradient} hover:scale-105 transition-all duration-300 ${tier.border}`}
+                    >
                       <Sparkles className="h-4 w-4 mr-2" />
                       Join Now
                     </Button>
@@ -294,7 +309,11 @@ export default function MembershipPage() {
             Start your premium snooker journey today with exclusive member benefits
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="gradient-secondary hover:scale-105 transition-all duration-300 accent-border">
+            <Button 
+              size="lg" 
+              onClick={() => setIsContactDialogOpen(true)}
+              className="gradient-secondary hover:scale-105 transition-all duration-300 accent-border"
+            >
               <Sparkles className="h-4 w-4 mr-2" />
               Become a Member
             </Button>
@@ -306,6 +325,72 @@ export default function MembershipPage() {
       </section>
 
       <Footer />
+
+      {/* Contact Info Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+        <DialogContent className="sm:max-w-md glass-effect professional-border">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center professional-glow text-primary">
+              Contact Info
+            </DialogTitle>
+            <DialogDescription className="text-center text-muted-foreground">
+              Get in touch with us to join our club
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-6 py-4">
+            <div className="flex items-start gap-4">
+              <div className="p-3 rounded-full bg-primary/10 border border-primary/30">
+                <MapPin className="h-5 w-5 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold mb-1">Address</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Basement Floor- 201-203 Hackney Road<br />
+                  London E2 8JL
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="p-3 rounded-full bg-secondary/10 border border-secondary/30">
+                <Phone className="h-5 w-5 text-secondary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold mb-1">Phone</h3>
+                <a 
+                  href="tel:+442079161244" 
+                  className="text-sm text-muted-foreground hover:text-secondary transition-colors"
+                >
+                  +44 020 7916 1244
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="p-3 rounded-full bg-accent/10 border border-accent/30">
+                <Mail className="h-5 w-5 text-accent" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold mb-1">Email</h3>
+                <a 
+                  href="mailto:snookerloversbar@gmail.com" 
+                  className="text-sm text-muted-foreground hover:text-accent transition-colors break-all"
+                >
+                  snookerloversbar@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <Button 
+              onClick={() => setIsContactDialogOpen(false)}
+              className="flex-1 gradient-primary professional-border"
+            >
+              Close
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </main>
   )
 }
