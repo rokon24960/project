@@ -7,7 +7,7 @@ export function MembershipOptionsSection() {
   const membershipOptions = [
     {
       name: "Standard Membership",
-      price: "£25",
+      price: "£15",
       period: "per year",
       description: "Perfect for casual players who enjoy regular games",
       features: [],
@@ -17,7 +17,7 @@ export function MembershipOptionsSection() {
     },
     {
       name: "Student Membership - 40% discount",
-      price: "£15",
+      price: "£10",
       period: "per year",
       description: "Perfect for casual players who enjoy regular games",
       features: [],

@@ -6,7 +6,7 @@ export function MembershipSection() {
   const plans = [
     {
       name: "Standard Membership",
-      price: "£25",
+      price: "£15",
       period: "per year",
       description: "Perfect for regular players",
       features: [
@@ -21,7 +21,7 @@ export function MembershipSection() {
     },
     {
       name: "Student Membership",
-      price: "£15",
+      price: "£10",
       period: "per year",
       description: "40% discount for students",
       features: [

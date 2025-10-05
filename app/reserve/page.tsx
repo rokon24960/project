@@ -282,35 +282,6 @@ Please contact the customer to confirm this reservation.
                     </div>
                   </div>
 
-                  {/* Table Selection */}
-                  <div className="space-y-6">
-                    <h3 className="text-xl font-bold text-accent flex items-center gap-2">
-                      <Crown className="h-5 w-5" />
-                      Table Selection *
-                    </h3>
-                    <div className="grid gap-4">
-                      {tableTypes.map((table) => {
-                        const IconComponent = table.icon
-                        return (
-                          <div 
-                            key={table.value}
-                            className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-300 ${
-                              formData.tableType === table.value 
-                                ? 'border-primary bg-primary/10 professional-border' 
-                                : 'border-border/30 glass-effect hover:border-primary/50'
-                            }`}
-                            onClick={() => handleInputChange('tableType', table.value)}
-                          >
-                            <div className="flex items-center gap-3">
-                              <IconComponent className="h-6 w-6 text-primary" />
-                              <span className="font-medium">{table.label}</span>
-                            </div>
-                          </div>
-                        )
-                      })}
-                    </div>
-                  </div>
-
                   {/* Special Requests */}
                   <div className="space-y-2">
                     <Label htmlFor="requests">Special Requests (Optional)</Label>

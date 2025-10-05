@@ -9,7 +9,7 @@ export default function MembershipPage() {
   const membershipTiers = [
     {
       name: "Standard Membership",
-      price: "£25",
+      price: "£15",
       period: "per year",
       description: "Perfect for casual players who enjoy regular games",
       features: [],
@@ -21,7 +21,7 @@ export default function MembershipPage() {
     },
     {
       name: "Student Membership - 40% discount",
-      price: "£15",
+      price: "£10",
       period: "per year",
       description: "Perfect for casual players who enjoy regular games",
       features: [],
