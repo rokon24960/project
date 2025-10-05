@@ -12,10 +12,22 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Royal Snooker Club - Premium Snooker Experience",
+  title: "Snooker Lovers Bar - Premium Snooker & Pool Club in London",
   description:
-    "Experience the finest snooker facilities with professional tables, expert coaching, and exclusive membership benefits.",
-  generator: "v0.app",
+    "Snooker Lovers Bar offers premium snooker and pool tables in Hackney, London. Enjoy drinks, snacks, and competitive gaming. Open daily 2PM-2AM. Memberships from £10/year.",
+  keywords: "snooker, pool, bar, Hackney, London, snooker club, pool tables, gaming, membership",
+  openGraph: {
+    title: "Snooker Lovers Bar - Premium Snooker & Pool Club",
+    description: "Premium snooker and pool tables in Hackney, London. Memberships from £10/year. Open daily 2PM-2AM.",
+    url: "https://xsnookerloversbar.com",
+    siteName: "Snooker Lovers Bar",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Snooker Lovers Bar - Premium Snooker & Pool Club",
+    description: "Premium snooker and pool tables in Hackney, London. Memberships from £10/year.",
+  },
 }
 
 export default function RootLayout({
